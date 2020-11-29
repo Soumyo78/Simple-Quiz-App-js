@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/3241476-200.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Quiz App</title>
+</head>
+<body id="canvas" onload="onload_qns()">
+    <div class="main-container">
+        <span class="logo-title">
+            <img id="logo" src="https://static.thenounproject.com/png/3241476-200.png" alt="quiz logo" height="100px">
+            <h1 id="heading">Simple Quiz</h1>
+        </span>
+        <span class="name-marks-container">
+            <h3 id="name-text">Hello, ___________________</h3>
+            <h3 id="your-marks-text">Your Marks: 0</h3>
+        </span>
+        <div class="question-container">
+            <h2 id="qns"></h2>
+        </div>
+        <div id="radio-answer" class="answer-container">
+            <span>
+                <input type="radio" name="answer" id="ans-1-radio" class="ans-radio-btn" value="1" onclick="onRadioClicked()">
+                <label for="1" id="ans-1"></label>
+            </span>
+            <span>
+                <input type="radio" name="answer" id="ans-2-radio" class="ans-radio-btn" value="2" onclick="onRadioClicked()">
+                <label for="2" id="ans-2"></label>
+            </span>
+            <span>
+                <input type="radio" name="answer" id="ans-3-radio" class="ans-radio-btn" value="3" onclick="onRadioClicked()">
+                <label for="3" id="ans-3"></label>
+            </span>
+        </div>
+        <div class="btn-container">
+            <span id="con-nex-btn-container">
+                <button class="red-btn" id="conf-btn">✔ Submit</button>
+                <button class="green-btn" id="nxt-btn">Next ➡</button>
+            </span>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
