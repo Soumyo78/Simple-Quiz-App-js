@@ -125,7 +125,7 @@ document.getElementById('nxt-btn').addEventListener("click", () =>{
         qns_corr_count = qns_count - 1;
         checkFinalAnswer(qns_corr_count);
         checkAnswer(selectedAns, qns_corr_count);
-        alert(`Congratulations ${name} !, you have completed the quiz. Now click the '✔ Submit' button to finish and submit.`)
+        alert(`Congratulations ${name} !, you have completed the quiz. Now click the '✔ Submit' button and click the leave the page option to finish and submit.`)
         document.getElementById('conf-btn').disabled = false;
     }  
 })
@@ -138,5 +138,4 @@ document.getElementById('conf-btn').addEventListener("click", () =>{
     localStorage.setItem("fullMarks", full_marks);
     localStorage.setItem("name", name);
     window.location.replace("final_screen.html");
-    // window.open("final_screen.html");
 })
