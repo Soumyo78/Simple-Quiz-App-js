@@ -4,12 +4,14 @@ let name = localStorage.getItem("name");
 
 function close_window(){
     if(confirm("Are you sure you want to exit ?")){
+        localStorage.clear();
         window.close();
     }
 }
 
 function restart(){
     if(confirm("Are you sure you want to restart the quiz ?")){
+        localStorage.clear();
         window.location.replace("index.html");
     }
 }

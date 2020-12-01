@@ -1,4 +1,7 @@
 window.onbeforeunload = function(event) {
+    var temp_item = localStorage.getItem("finalMarks");
+    console.log(temp_item, typeof  temp_item)
+    if(temp_item===null)
     return confirm("Confirm refresh");
 };
 
@@ -13,7 +16,7 @@ let qns_ans_arr = [
     {question: "8. '.INI' extension refers usually to what kind of file?", answer: "System file"},
     {question: "9. 'DB' computer abbreviation usually means ?", answer: "Database"},
     {question: "10. What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines.", answer: "WAN (Wide Area Network)"}
-];
+]
 
 let radio_options_arr = [
     {option1: "Record", option2: "Field", option3: "File"},
@@ -26,6 +29,7 @@ let radio_options_arr = [
     {option1: "System file", option2: "Image file", option3: "Image Color Matching Profile file"},
     {option1: "Double Byte", option2: "Driver Boot", option3: "Database"},
     {option1: "World Wide Web", option2: "WAN (Wide Area Network)", option3: "URL (Universal Resource Locator)"}
+   
 ];
 
 let name = null;
@@ -137,5 +141,6 @@ document.getElementById('conf-btn').addEventListener("click", () =>{
     localStorage.setItem("finalMarks", final_marks);
     localStorage.setItem("fullMarks", full_marks);
     localStorage.setItem("name", name);
+
     window.location.replace("final_screen.html");
 })
